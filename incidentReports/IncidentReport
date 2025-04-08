@@ -1,0 +1,14 @@
+Summary: The incident was detected around 8:30 on the morning of April 8th due to a CPU and memory usage alert. After the incident was detected it was not resolved until around 10am on the same day after some careful inspection of the logs.
+
+Detection: The problem was not detected by normal means. I forgot to add the pizza_failures alert, only the normal pizza_orders alert. Because of this, the issue was harder to detect and was originally noticed by the CPU and memory usage alert.
+
+Impact: The amount of failed pizza order requests was not acceptable so we needed to address and fix the problem
+
+Timeline: The incident was detected around 8:30 on the morning of April 8th. After the incident was detected it was not resolved until around 10am on the same day.
+Rootcause: There was an increased number of failed pizza purchases leading to the chaos.
+
+Resolution: Because of alert, I carefully inspected the logs. The error message was found and the link was clicked in order to resolve the issue.
+
+prevention: now we can find out ehy this happened and fix it even quicker if it does happen again
+
+action items: Manual auto-scaling rate limit put in place temporarily to limit failures. Set up more actions to alert in case of errors
